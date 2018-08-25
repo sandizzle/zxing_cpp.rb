@@ -10,6 +10,7 @@ bin/zxe
 ext/zxing/extconf.rb
 ext/zxing/zxing-cpp
 ext/zxing/zxing-cpp/.gitignore
+ext/zxing/zxing-cpp/.travis.yml
 ext/zxing/zxing-cpp/AUTHORS
 ext/zxing/zxing-cpp/CMakeLists.txt
 ext/zxing/zxing-cpp/COPYING
@@ -22,8 +23,9 @@ ext/zxing/zxing-cpp/cli/src/jpgd.h
 ext/zxing/zxing-cpp/cli/src/lodepng.cpp
 ext/zxing/zxing-cpp/cli/src/lodepng.h
 ext/zxing/zxing-cpp/cli/src/main.cpp
-ext/zxing/zxing-cpp/cmake/FindCPPUNIT.cmake
-ext/zxing/zxing-cpp/cmake/FindIconv.cmake
+ext/zxing/zxing-cpp/cmake/FindModules/FindCPPUNIT.cmake
+ext/zxing/zxing-cpp/cmake/FindModules/FindIconv.cmake
+ext/zxing/zxing-cpp/cmake/zxing-config.cmake.in
 ext/zxing/zxing-cpp/core/src/bigint/.gitignore
 ext/zxing/zxing-cpp/core/src/bigint/BigInteger.cc
 ext/zxing/zxing-cpp/core/src/bigint/BigInteger.hh
@@ -263,6 +265,10 @@ ext/zxing/zxing-cpp/core/tests/src/qrcode/decoder/DataMaskTest.cpp
 ext/zxing/zxing-cpp/core/tests/src/qrcode/decoder/DataMaskTest.h
 ext/zxing/zxing-cpp/core/tests/src/qrcode/decoder/ModeTest.cpp
 ext/zxing/zxing-cpp/core/tests/src/qrcode/decoder/ModeTest.h
+ext/zxing/zxing-cpp/opencv-cli/src/main.cpp
+ext/zxing/zxing-cpp/opencv/src/zxing/MatSource.cpp
+ext/zxing/zxing-cpp/opencv/src/zxing/MatSource.h
+ext/zxing/zxing-cpp/source_files.cmake
 ext/zxing/zxing.cc
 lib/zxing.rb
 lib/zxing/.gitignore
