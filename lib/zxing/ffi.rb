@@ -17,4 +17,5 @@ module ZXing::FFI
   autoload :DataMatrix, 'zxing/ffi/datamatrix'
   autoload :Aztec, 'zxing/ffi/aztec'
   autoload :QRCode, 'zxing/ffi/qrcode'
+  autoload :PDF417, 'zxing/ffi/pdf417'
 end

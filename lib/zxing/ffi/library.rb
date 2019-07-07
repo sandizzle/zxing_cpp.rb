@@ -15,6 +15,7 @@ module ZXing::FFI::Library
                                     :pointer], :pointer
   attach_function 'MultiFormatReader_new', [], :pointer
   attach_function 'DataMatrixReader_new', [], :pointer
+  attach_function 'PDF417Reader_new', [], :pointer
   attach_function 'AztecReader_new', [], :pointer
   attach_function 'Code39Reader_new', [:bool, :bool], :pointer
   attach_function 'LuminanceSource_delete', [:pointer], :void
@@ -42,6 +43,7 @@ module ZXing::FFI::Library
   attach_function 'DecodeHints_delete', [:pointer], :void
   attach_function 'DecodeHints_setTryHarder', [:pointer, :bool], :void
   attach_function 'DecodeHints_setDataMatrix', [:pointer, :bool], :void
+  attach_function 'DecodeHints_setPDF417', [:pointer, :bool], :void
   attach_function 'Result_delete', [:pointer], :void
   attach_function 'Result_getBarcodeFormat', [:pointer], :int
   attach_function 'Result_getText', [:pointer], :pointer

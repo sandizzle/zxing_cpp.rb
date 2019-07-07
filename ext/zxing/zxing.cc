@@ -3,6 +3,7 @@
 #include <zxing/Reader.h>
 #include <zxing/MultiFormatReader.h>
 #include <zxing/datamatrix/DataMatrixReader.h>
+#include <zxing/pdf417/PDF417Reader.h>
 #include <zxing/aztec/AztecReader.h>
 #include <zxing/oned/Code39Reader.h>
 #include <zxing/common/GreyscaleLuminanceSource.h>
@@ -73,6 +74,11 @@ extern "C" {
 
   void* DataMatrixReader_new() {
     zxing::datamatrix::DataMatrixReader* reader = new zxing::datamatrix::DataMatrixReader();
+    return new zxing::Ref<zxing::Reader>(reader);
+  }
+  
+  void* PDF417Reader_new() {
+    zxing::pdf417::PDF417Reader* reader = new zxing::pdf417::PDF417Reader();
     return new zxing::Ref<zxing::Reader>(reader);
   }
 
@@ -189,6 +195,12 @@ extern "C" {
     zxing::DecodeHints* hints  = (zxing::DecodeHints*)hints_ptr;
     hints->addFormat(zxing::BarcodeFormat::DATA_MATRIX);
   }
+  
+  void DecodeHints_setPDF417(void* hints_ptr, bool) {
+    zxing::DecodeHints* hints  = (zxing::DecodeHints*)hints_ptr;
+    hints->addFormat(zxing::BarcodeFormat::PDF_417);
+  }
+  
 
   void Result_delete(void* result_ptr) {
     zxing::Ref<zxing::Result>* ref = (zxing::Ref<zxing::Result>*)result_ptr;

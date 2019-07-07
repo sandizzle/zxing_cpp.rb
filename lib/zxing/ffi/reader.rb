@@ -24,6 +24,9 @@ class ZXing::FFI::Reader
             when :DATA_MATRIX
               ZXing::FFI::Library.
                 DecodeHints_setDataMatrix native_hints, true
+            when :PDF_417
+              ZXing::FFI::Library.
+                DecodeHints_setPDF417 native_hints, true
             else
               raise "implement hint for #{format}"
             end
