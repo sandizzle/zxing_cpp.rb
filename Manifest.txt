@@ -296,6 +296,7 @@ lib/zxing/ffi/luminance_source.rb
 lib/zxing/ffi/multi_format_reader.rb
 lib/zxing/ffi/oned.rb
 lib/zxing/ffi/oned/code_39_reader.rb
+lib/zxing/ffi/pdf417/pdf417_reader.rb
 lib/zxing/ffi/qrcode.rb
 lib/zxing/ffi/qrcode/decoder.rb
 lib/zxing/ffi/qrcode/detector.rb
@@ -309,6 +310,8 @@ lib/zxing/multi_format_reader.rb
 lib/zxing/not_found_exception.rb
 lib/zxing/oned.rb
 lib/zxing/oned/code_39_reader.rb
+lib/zxing/pdf417.rb
+lib/zxing/pdf417/pdf417_reader.rb
 lib/zxing/qrcode.rb
 lib/zxing/qrcode/decoder.rb
 lib/zxing/qrcode/detector.rb
